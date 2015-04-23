@@ -1,6 +1,8 @@
 # Crepido
 Create boards to track users and projects from flat markdown files.
 
+![crepido-screenshot](https://cloud.githubusercontent.com/assets/124599/7302870/7aa4ab76-e9fd-11e4-92b5-0a93dd05fccb.png)
+
 ## Setup
 
 1. `$ git clone git@github.com:arshad/crepido.git`.
