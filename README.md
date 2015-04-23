@@ -33,7 +33,7 @@ picture: https://avatars0.githubusercontent.com/u/124599?v=3&s=460
 Note:
 
 1. Each heading followed by a list will be converted to a card.
-2. [Title] are converted to labels.
+2. [Title] [labels] are converted to labels.
 
 ## How to deploy to Github Pages
 
