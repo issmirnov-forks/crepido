@@ -42,6 +42,11 @@ Note:
 1. Update `remoteUrl, origin and branch` in *config.json*.
 2. Run `$ gulp deploy`.
 
+## How to customize colors
+
+To add custom colors for boards and labels, see `./src/assets/sass/tools/_colors.scss`.
+
+
 License
 --------------
 
