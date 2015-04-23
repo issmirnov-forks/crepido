@@ -1,6 +1,8 @@
 # Crepido
 Create boards to track users and projects from flat markdown files.
 
+![crepido-screenshot](https://cloud.githubusercontent.com/assets/124599/7302912/cb8d9d54-e9fd-11e4-9183-175f79b0dd4b.png)
+
 ## Setup
 
 1. `$ git clone git@github.com:arshad/crepido.git`.
@@ -39,6 +41,11 @@ Note:
 
 1. Update `remoteUrl, origin and branch` in *config.json*.
 2. Run `$ gulp deploy`.
+
+## How to customize colors
+
+To add custom colors for boards and labels, see `./src/assets/sass/tools/_colors.scss`.
+
 
 License
 --------------
