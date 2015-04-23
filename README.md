@@ -5,7 +5,7 @@ Create boards to track users and projects from flat markdown files.
 
 ## Setup
 
-1. `$ git clone git@github.com:arshad/crepido.git`.
+1. `$ git clone https://github.com/arshad/crepido.git`.
 2. `$ cd crepido && npm install`.
 3. `$ gulp`.
 
