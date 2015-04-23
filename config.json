@@ -1,9 +1,9 @@
 {
   "title" : "Crepido",
-  "description": "Track users and projects visually",
+  "description": "Create boards to track users and projects from flat markdown files.",
   "picture" : "http://placehold.it/65x65",
   "remoteUrl": "git@github.com:arshad/crepido",
   "origin" : "origin",
   "branch" : "gh-pages",
-  "footer": "Track users and projects visually from flat text files. <a href=\"http://github.com/arshad/crepido\">Fork on Github</a>"
+  "footer": "Create boards to track users and projects from flat markdown files. <a href=\"http://github.com/arshad/crepido\">Fork on Github</a>"
 }
