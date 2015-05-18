@@ -61,6 +61,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('public/assets/stylesheets'));
 });
 
+// Gulp 'js' task
 gulp.task('js', function(){
   return gulp.src('src/assets/javascripts/**/*.js')
     .pipe(uglify())
