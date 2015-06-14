@@ -90,7 +90,7 @@ gulp.task('watch', function () {
 });
 
 // Gulp 'deploy' task
-gulp.task('deploy', ['build'], function() {
+gulp.task('deploy', ['build', 'assets','static'], function() {
   return gulp.src('./public/**/*')
     .pipe(pages({
       remoteUrl: crepido.remoteUrl,
@@ -99,8 +99,14 @@ gulp.task('deploy', ['build'], function() {
     }));
 });
 
+// Gulp 'static' task
+gulp.task('static', function () {
+  return gulp.src(['src/*.*'], { dot: true })
+    .pipe(gulp.dest('public'));
+});
+
 // Gulp 'default' task.
-gulp.task('default', ['assets', 'build', 'webserver', 'watch']);
+gulp.task('default', ['assets', 'static', 'build', 'webserver', 'watch']);
 
 // Builds boards from ./boards/*.md
 function buildBoards() {
