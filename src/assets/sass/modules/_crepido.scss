@@ -7,7 +7,7 @@
 }
 
 .board {
-  width: 325px;
+  min-width: 325px;
   float: left;
 }
 .board + .board {
@@ -61,8 +61,21 @@
       background-color: #fff;
       border: 1px solid #eee;
       border-width: 1px 0;
+
+      &.done {
+        text-decoration: line-through;
+        color: #999;
+        span {
+          opacity: 0.5;
+        }
+      }
     }
   }
+}
+
+// Timers
+// -----------------------------------------------------------------------------
+.timer {
 }
 
 // Board colors.
@@ -77,6 +90,9 @@
 // -----------------------------------------------------------------------------
 @each $name, $color in $label-colors {
   .label--#{$name} {
+    background-color: $color;
+  }
+  .progress-bar--#{$name} {
     background-color: $color;
   }
 }

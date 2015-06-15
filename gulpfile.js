@@ -35,6 +35,12 @@ markedRenderer.heading = function(text, level) {
 markedRenderer.list = function(body, ordered) {
   var type = ordered ? 'ol' : 'ul';
 
+  // Add Checkboxes
+  body = addCheckboxes(body);
+
+  // Create timers
+  body = addTimers(body);
+
   // Create labels.
   body = labelize(body);
 
@@ -72,6 +78,12 @@ gulp.task('js', function(){
 // Gulp 'assets' task
 gulp.task('assets', ['sass', 'js']);
 
+// Gulp 'static' task
+gulp.task('static', function () {
+  return gulp.src(['src/*.*'], { dot: true })
+    .pipe(gulp.dest('public'));
+});
+
 // Gulp 'webserver' task: setups the webserver and enable livereload.
 gulp.task('webserver', function() {
   gulp.src('public')
@@ -90,19 +102,13 @@ gulp.task('watch', function () {
 });
 
 // Gulp 'deploy' task
-gulp.task('deploy', ['build', 'assets','static'], function() {
-  return gulp.src('./public/**/*')
+gulp.task('deploy', ['build', 'assets', 'static'], function() {
+  return gulp.src('./public/**/*', { dot: true })
     .pipe(pages({
       remoteUrl: crepido.remoteUrl,
       origin: crepido.origin,
       branch: crepido.branch
     }));
-});
-
-// Gulp 'static' task
-gulp.task('static', function () {
-  return gulp.src(['src/*.*'], { dot: true })
-    .pipe(gulp.dest('public'));
 });
 
 // Gulp 'default' task.
@@ -138,10 +144,25 @@ function buildBoards() {
   return crepido;
 }
 
+// Convert [ ] and [x] to checkboxes.
+function addCheckboxes(string) {
+  return string.replace(new RegExp("\\[([\\s|x])\\]", "gi"), function($0, $1) {
+    var value = ($1 == 'x') ? 1 : 0;
+    return '<input class="status hidden" type="checkbox" value="' + value + '"/>';
+  });
+}
+
+// Converts [1/8] to timers.
+function addTimers(string) {
+  return string.replace(new RegExp("\\[([0-9](.[0-9])?)h\\]", "gi"), function($0, $1) {
+    return '<span class="timer" data-value="' + $1 + '"><i class="fa fa-clock-o"></i>' + $1 + 'h</span>';
+  });
+}
+
 // Converts [string] to <span class="label">string</span>.
 function labelize(string) {
-  return string.replace(new RegExp("\\[(.*)\\]", "gi"), function($0, $1) {
+  return string.replace(new RegExp("\\[([^\\]]*)\\]", "gi"), function($0, $1) {
     var name = $1.toLowerCase().replace(/[^\w]+/g, '-');
-    return '<span class="label label--' + name + '">' + $1 + '</span>';
+    return '<span class="project label label--' + name + '" data-name="' + name + '" data-project="' + $1 + '"><i class="fa fa-folder-o"></i>' + $1 + '</span>';
   });
 }
