@@ -26,16 +26,22 @@ picture: https://avatars0.githubusercontent.com/u/124599?v=3&s=460
 
 # Pipeline
 
-* [Project A] Turnip greens yarrow ricebean rutabaga endive.
-* [Project B] Nori grape silver beet broccoli kombu beet greens fava bean.
-```
+* [Project A] [3h] Turnip greens yarrow ricebean rutabaga endive.
+* [Project B] [2h] Nori grape silver beet broccoli kombu beet greens fava bean.
 
+# Tasks
+* [x] Completed task Nori grape silver
+* [ ] Turnip greens yarrow
+* [ ] Nori grape silver
+```
 3. Run `$ gulp`
 
 Note:
 
 1. Each heading followed by a list will be converted to a card.
-2. [Title] [labels] are converted to labels.
+2. `[Title] [labels]` are converted to labels.
+3. `[3h]` is converted to timers for the progress bar.
+4. `[ ]`, `[x]` are used to show tasks.
 
 ## How to deploy to Github Pages
 
