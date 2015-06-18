@@ -33,6 +33,10 @@ picture: https://avatars0.githubusercontent.com/u/124599?v=3&s=460
 * [x] Completed task Nori grape silver
 * [ ] Turnip greens yarrow
 * [ ] Nori grape silver
+
+# [-] Collapsible Tasks
+* [x] One
+* [ ] Two
 ```
 3. Run `$ gulp`
 
@@ -42,6 +46,7 @@ Note:
 2. `[Title] [labels]` are converted to labels.
 3. `[3h]` is converted to timers for the progress bar.
 4. `[ ]`, `[x]` are used to show tasks.
+5. '# [-] Title' will make a board collapsible. 
 
 ## How to deploy to Github Pages
 
