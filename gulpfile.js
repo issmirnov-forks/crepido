@@ -164,7 +164,7 @@ function addCheckboxes(string) {
   });
 }
 
-// Converts [1/8] to timers.
+// Converts [1h], [7h] to timers.
 function addTimers(string) {
   return string.replace(new RegExp("\\[([0-9](.[0-9])?)h\\]", "gi"), function($0, $1) {
     return '<span class="timer" data-value="' + $1 + '"><i class="fa fa-clock-o"></i>' + $1 + 'h</span>';
