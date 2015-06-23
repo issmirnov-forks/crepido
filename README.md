@@ -1,5 +1,5 @@
 # Crepido
-Create boards to track users and projects from flat markdown files.
+Create (kanban) boards to track users and projects from flat Markdown files.
 
 ![crepido-screenshot](https://cloud.githubusercontent.com/assets/124599/7302912/cb8d9d54-e9fd-11e4-9183-175f79b0dd4b.png)
 
@@ -56,7 +56,6 @@ Note:
 ## How to customize colors
 
 To add custom colors for boards and labels, see `./src/assets/sass/tools/_colors.scss`.
-
 
 License
 --------------
