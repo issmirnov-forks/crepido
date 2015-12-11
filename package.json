@@ -12,6 +12,10 @@
     "projects"
   ],
   "author": "Arshad Chummun <arshad@chummun.com> (http://arshad.github.io/)",
+  "repository" : {
+    "type" : "git",
+    "url" : "arshad/crepido"
+  },
   "license": "MIT",
   "dependencies": {
     "gulp": "~3.8.11",
