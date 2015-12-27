@@ -1,7 +1,7 @@
 {
   "name": "Crepido",
   "version": "1.0.0",
-  "description": "Track users and projects",
+  "description": "Create (kanban) boards to track users and projects from flat markdown files.",
   "main": "index.js",
   "private": true,
   "scripts": {
