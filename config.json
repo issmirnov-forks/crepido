@@ -1,6 +1,6 @@
 {
-  "title" : "Crepido",
-  "description": "Create boards to track users and projects from flat markdown files.",
+  "title" : "Ivan Smrinov",
+  "description": "Kanban-esque board of the current stack, favorite tools, and learning list.", 
   "picture" : "http://placehold.it/65x65",
   "remoteUrl": "git@github.com:issmirnov/issmirnov.github.io",
   "origin" : "origin",
