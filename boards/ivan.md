@@ -7,6 +7,7 @@ picture: https://ivansmirnov.name/img/profile.jpg
 
 * i3-wm + i3blocks + rofi on ubuntu 14.04
 * spectacle + path finder on OSX
+* Smart Launcher 3 + Tasker on Android
 * Ghost for blogging
 
 # Favorite Tools
@@ -27,7 +28,7 @@ picture: https://ivansmirnov.name/img/profile.jpg
 # [-] Working On
 * Dashboards for my life (Kibana and Tipboard)
 * Tinc VPN (connect android to personal server)
-* Blog: blog.ivansmirnov.name
+* Blog: http://blog.ivansmirnov.name
 
 
 # [-] Recently Completed
