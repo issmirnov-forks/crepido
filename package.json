@@ -1,10 +1,11 @@
 {
   "name": "Crepido",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create (kanban) boards to track users and projects from flat markdown files.",
   "main": "index.js",
   "private": true,
   "scripts": {
+    "run": "node index.js"
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -12,22 +13,14 @@
     "tasklist",
     "projects"
   ],
-  "author": "Arshad Chummun <arshad@chummun.com> (http://arshad.io/)",
-  "repository" : {
-    "type" : "git",
-    "url" : "arshad/crepido"
+  "author": "Álvaro Galisteo (http://alvaro.ga)",
+  "repository": {
+    "type": "git",
+    "url": "SrGMC/crepido"
   },
   "license": "MIT",
   "dependencies": {
-    "gulp": "~3.9.1",
-    "gulp-data": "~1.2.1",
-    "marked": "~0.3.5",
-    "front-matter": "~2.0.6",
-    "gulp-swig": "~0.8.0",
-    "gulp-webserver": "~0.9.1",
-    "gulp-sass": "*",
-    "gulp-concat": "~2.6.0",
-    "gulp-uglify": "~1.5.3",
-    "gulp-gh-pages": "~0.5.4"
+    "express": "^4.16.4",
+    "marked": "~0.3.5"
   }
 }
