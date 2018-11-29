@@ -1,6 +1,8 @@
 # Crepido
 Create (kanban) boards to track users and projects from flat Markdown files.
 
+![Screenshot](https://raw.githubusercontent.com/SrGMC/crepido/master/screenshot.png)
+
 ## Setup
 
 1. `$ git clone https://github.com/SrGMC/crepido.git`.
