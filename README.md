@@ -33,6 +33,7 @@ Create (kanban) boards to track users and projects from flat Markdown files.
 * `code`
 ```
 
+3. Acess your boards a `http://<server ip>:3000/<board name>` or `http://<server ip>:3000/<board name>.md`
 Note:
 
 1. Each heading followed by a list will be converted to a card.
