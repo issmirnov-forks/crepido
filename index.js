@@ -45,7 +45,7 @@ function gc(){
     }
 }
 
-// Generates HTML from markdown
+// Render HTML from markdown
 function renderHTML(data){
     var boards = [];
     var heads = data.match(/(---)\n.+\n.+\n(---)/g);
@@ -99,15 +99,13 @@ markedRenderer.list = function(body, ordered) {
     // Create labels.
     body = labelize(body);
 
-    // Create span
-    //body = spanize(body);
-
     // Add a suffix. See markedRenderer.heading.
     var suffix = '</div>';
 
     return '<' + type + '>\n' + body + '</' + type + '>' + suffix + '\n';
 };
 
+// Set marked options
 marked.setOptions({
     renderer: markedRenderer,
     pedantic: false,
@@ -120,6 +118,7 @@ marked.setOptions({
     xhtml: false
 });
 
+// GET request for boards
 app.get('/board\*', function(request, response){
     var reqpath = __dirname + request.path + ((request.path.indexOf(".md") === -1) ? ".md" : "");
     var reqpath = reqpath.replace("/board", "/boards")
@@ -154,6 +153,7 @@ app.get('/board\*', function(request, response){
     });
 });
 
+// General GET request
 app.get('/\*', function(request, response){
     if(request.path.indexOf(".css") !== -1 || request.path.indexOf(".js") !== -1){
         response.status(200).sendFile(__dirname + request.path);
@@ -214,16 +214,6 @@ function labelize(string) {
         var name = $1.toLowerCase().replace(/[^\w]+/g, '-');
         return '<span class="project label label--' + name + '" data-name="' + name + '" data-project="' + $1 + '"><i class="fa fa-folder-o"></i>' + $1 + '</span>';
     });
-}
-
-function spanize(string){
-    var matches = string.match(/\>(\s+[A-z]{1,})+</g);
-    var replacer = [];
-    for (var i = 0; i < matches.length; i++) {
-        replacer[i] = matches[i].replace("> ", ">&nbsp;<span>").replace(new RegExp("<" + '$'), "</span><");
-        string = string.replace(matches[i], replacer[i]);
-    }
-    return string;
 }
 
 app.listen(3000);
