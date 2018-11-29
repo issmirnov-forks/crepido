@@ -216,5 +216,5 @@ function labelize(string) {
     });
 }
 
-app.listen(3000);
+app.listen(port);
 console.log("Starting server at port " + port + "\nCache time: " + maxTime + " min" + "\nSee node index.js -h for help\n");
