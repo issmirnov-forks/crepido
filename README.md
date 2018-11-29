@@ -9,8 +9,8 @@ Create (kanban) boards to track users and projects from flat Markdown files.
 2. `$ cd crepido && npm install`.
 3. `$ npm run`.
 
-A server will start at port 3000
-You can change the port and cache time with `node index.js -p <port> -c <cache time>`
+A server will start at port 3000.  
+You can change the port and cache time with `node index.js -p <port> -c <cache time>`.
 
 ## How to create boards
 
@@ -36,13 +36,14 @@ You can change the port and cache time with `node index.js -p <port> -c <cache t
 * `code`
 ```
 
-3. Acess your boards a `http://<server ip>:3000/<board name>` or `http://<server ip>:3000/<board name>.md`
+3. Acess your boards a `http://<server ip>:3000/board/<board name>` or `http://<server ip>:3000/board/<board name>.md`
   
 Note:
 1. Each heading followed by a list will be converted to a card.
 2. `[Title] [labels]` are converted to labels.
 3. `[3h]` is converted to timers.
 4. `[ ]`, `[x]` are used to show tasks.
+5. You can create more than one board on the same page by duplicating the code above
 
 ## How to customize colors
 
