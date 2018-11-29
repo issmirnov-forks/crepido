@@ -48,9 +48,9 @@ Note:
 To add custom colors for boards and labels, edit `./assets/styles.css`.
 
 ## TODO
-- [ ] Command line arguments for cache time
-- [ ] Start page with all existing boards
-- [ ] 404 page
+* [x] Command line arguments for cache time
+* [x] Start page with all existing boards
+* [x] 404 page
 
 License
 --------------
