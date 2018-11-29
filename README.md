@@ -34,8 +34,8 @@ Create (kanban) boards to track users and projects from flat Markdown files.
 ```
 
 3. Acess your boards a `http://<server ip>:3000/<board name>` or `http://<server ip>:3000/<board name>.md`
+  
 Note:
-
 1. Each heading followed by a list will be converted to a card.
 2. `[Title] [labels]` are converted to labels.
 3. `[3h]` is converted to timers.
@@ -43,7 +43,7 @@ Note:
 
 ## How to customize colors
 
-To add custom colors for boards and labels, see `./src/assets/sass/tools/_colors.scss`.
+To add custom colors for boards and labels, edit `./assets/styles.css`.
 
 License
 --------------
