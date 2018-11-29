@@ -9,7 +9,8 @@ Create (kanban) boards to track users and projects from flat Markdown files.
 2. `$ cd crepido && npm install`.
 3. `$ npm run`.
 
-*A server will start al port 3000*
+A server will start at port 3000
+You can change the port and cache time with `node index.js -p <port> -c <cache time>`
 
 ## How to create boards
 
