@@ -1,13 +1,13 @@
 # Crepido
 Create (kanban) boards to track users and projects from flat Markdown files.
 
-![crepido-screenshot](https://cloud.githubusercontent.com/assets/124599/7302912/cb8d9d54-e9fd-11e4-9183-175f79b0dd4b.png)
-
 ## Setup
 
-1. `$ git clone https://github.com/arshad/crepido.git`.
+1. `$ git clone https://github.com/SrGMC/crepido.git`.
 2. `$ cd crepido && npm install`.
-3. `$ gulp`.
+3. `$ npm run`.
+
+*A server will start al port 3000*
 
 ## How to create boards
 
@@ -16,42 +16,29 @@ Create (kanban) boards to track users and projects from flat Markdown files.
 
 ```
 ---
-name: Arshad
-picture: https://avatars0.githubusercontent.com/u/124599?v=3&s=460
+"name": "Crepido",
+"picture": "http://alvaro.ga/images/header.png"
 ---
 
-# In Progress
+# Headers
+* [UI] Labels
+* [1h] Timers
+* [25m] [UI] Labels and timers
+* [ ] Uncompleted task
+* [x] Completed task
 
-* [Project A] Gumbo beet greens corn soko endive gumbo gourd.
-
-# Pipeline
-
-* [Project A] [3h] Turnip greens yarrow ricebean rutabaga endive.
-* [Project B] [2h] Nori grape silver beet broccoli kombu beet greens fava bean.
-
-# Tasks
-* [x] Completed task Nori grape silver
-* [ ] Turnip greens yarrow
-* [ ] Nori grape silver
-
-# [-] Collapsible Tasks
-* [x] One
-* [ ] Two
+# Markdown
+* **Bold**
+* *Italic*
+* `code`
 ```
-3. Run `$ gulp`
 
 Note:
 
 1. Each heading followed by a list will be converted to a card.
 2. `[Title] [labels]` are converted to labels.
-3. `[3h]` is converted to timers for the progress bar.
+3. `[3h]` is converted to timers.
 4. `[ ]`, `[x]` are used to show tasks.
-5. '# [-] Title' will make a board collapsible. 
-
-## How to deploy to Github Pages
-
-1. Update `remoteUrl, origin and branch` in *config.json*.
-2. Run `$ gulp deploy`.
 
 ## How to customize colors
 
@@ -62,7 +49,7 @@ License
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Arshad Chummun
+Copyright (c) 2017 Álvaro Galisteo
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
