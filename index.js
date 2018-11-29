@@ -120,8 +120,9 @@ marked.setOptions({
 
 // GET request for boards
 app.get('/board\*', function(request, response){
+    gc();
     var reqpath = __dirname + request.path + ((request.path.indexOf(".md") === -1) ? ".md" : "");
-    var reqpath = reqpath.replace("/board", "/boards")
+    reqpath = reqpath.replace("/board", "/boards");
     var cached = isCached(reqpath);
     if(cached.response){
         console.log("get(): serving cached " + request.path + " to " + request.ip);
@@ -155,6 +156,7 @@ app.get('/board\*', function(request, response){
 
 // General GET request
 app.get('/\*', function(request, response){
+    gc();
     if(request.path.indexOf(".css") !== -1 || request.path.indexOf(".js") !== -1){
         response.status(200).sendFile(__dirname + request.path);
         return;
