@@ -38,7 +38,7 @@ function isCached(path){
 function gc(){
     var now = new Date();
     for (var i = 0; i < cache.length; i++) {
-        if(now - cache[i].time >= 10*60*1000){
+        if(now - cache[i].time >= maxTime*60*1000){
             console.log("gc(): Flushing " + cache[i].path);
             cache.splice(i, 1);
         }
