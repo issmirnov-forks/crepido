@@ -1,16 +1,17 @@
-# Crepido
-Create (kanban) boards to track users and projects from flat Markdown files.
+# Kanbana
+Kanbana allows you to create boards to track users and projects from flat markdown files using Kanban boards.
+Based on Crepido by [@issmirnov](https://github.com/issmirnov).
 
 ![Screenshot](https://raw.githubusercontent.com/SrGMC/crepido/master/screenshot.png)
 
 ## Setup
 
 1. `$ git clone https://github.com/SrGMC/crepido.git`.
-2. `$ cd crepido && npm install`.
+2. `$ cd kanbana && npm install`.
 3. `$ npm run`.
 
 A server will start at port 3000.  
-You can change the port and cache time with `node index.js -p <port> -c <cache time>`.
+You can change the port and cache time with `node index.js [-p <port>] [-c <cache time>]`.
 
 ## How to create boards
 
@@ -19,7 +20,7 @@ You can change the port and cache time with `node index.js -p <port> -c <cache t
 
 ```
 ---
-"name": "Crepido",
+"name": "Kanbana",
 "picture": "http://alvaro.ga/images/header.png"
 ---
 

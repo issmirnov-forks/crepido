@@ -32,3 +32,4 @@ public
 .publish
 *.md
 .DS_Store
+boards/crepido.md
