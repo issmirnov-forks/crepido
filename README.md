@@ -6,7 +6,7 @@ Based on Crepido by [@issmirnov](https://github.com/issmirnov).
 
 ## Setup
 
-1. `$ git clone https://github.com/SrGMC/crepido.git`.
+1. `$ git clone https://github.com/SrGMC/kanbana.git`.
 2. `$ cd kanbana && npm install`.
 3. `$ npm run`.
 

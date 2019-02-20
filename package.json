@@ -1,7 +1,7 @@
 {
-  "name": "Crepido",
-  "version": "1.0.1",
-  "description": "Create (kanban) boards to track users and projects from flat markdown files.",
+  "name": "Kanbana",
+  "version": "1.0.2",
+  "description": "Kanbana allows you to create boards to track users and projects from flat markdown files using Kanban boards.",
   "main": "index.js",
   "private": true,
   "scripts": {
@@ -16,7 +16,7 @@
   "author": "Álvaro Galisteo (http://alvaro.ga)",
   "repository": {
     "type": "git",
-    "url": "SrGMC/crepido"
+    "url": "SrGMC/kanbana"
   },
   "license": "MIT",
   "dependencies": {
