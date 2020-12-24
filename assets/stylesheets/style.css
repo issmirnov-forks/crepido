@@ -540,7 +540,12 @@ footer {
        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, .2);
             box-shadow: 0 0 3px rgba(0, 0, 0, .2);
 }
-.board__card > h1 {
+.board__card > h1,
+.board__card > h2,
+.board__card > h3,
+.board__card > h4,
+.board__card > h5,
+.board__card > h6 {
     padding: 10px 15px;
     margin: 0;
 
@@ -611,3 +616,4 @@ input.done + span {
 .progress-bar--CLI {
     background-color: #e74c3c;
 }
+

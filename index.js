@@ -64,8 +64,7 @@ var markedRenderer = new marked.Renderer();
 // Heading callback for renderer.
 markedRenderer.heading = function(text, level) {
     var prefix = '<h' + level + '>';
-    // Wrap in a div if h1
-    if (level == 1) {
+
         var cssClasses = ['board__card'];
 
         // Add collapsible helpers.
@@ -79,7 +78,7 @@ markedRenderer.heading = function(text, level) {
         cssClasses.push('board__card--' + name);
 
         prefix = '<div class="' + cssClasses.join(" ") + '">' + prefix;
-    }
+
 
     return prefix + text + '</h' + level + '>';
 };
@@ -219,4 +218,4 @@ function labelize(string) {
 }
 
 app.listen(port);
-console.log("Starting server at port " + port + "\nCache time: " + maxTime + " min" + "\nSee node index.js -h for help\n");
+console.log("Starting server http://localhost:" + port + "\nCache time: " + maxTime + " min" + "\nSee node index.js -h for help\n");
