@@ -141,9 +141,9 @@ app.get("/board*", function (request, response) {
         console.log("get(): serving " + request.path + " to " + request.ip);
         var rendered = renderHTML(data);
         var html = "";
-        var title = [];
+        var title = request.path.split('/');
+        title = title[title.length - 1];
         for (var i = 0; i < rendered.length; i++) {
-            title.push(rendered[i].head.name);
             var picture = "";
             if (rendered[i].head.picture != "none") {
                 picture = '<a href="' + rendered[i].head.picture + '" class="board__picture"><img src="' + rendered[i].head.picture + '"></a>';
@@ -162,7 +162,7 @@ app.get("/board*", function (request, response) {
         }
         html =
             "<html><head><title>" +
-            title.join(" | ") +
+            title.charAt(0).toUpperCase() + title.slice(1) +
             '</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="/assets/stylesheets/style.css"><link rel="stylesheet" href="/assets/stylesheets/labels.css"></head><body><div class="content">' +
             html +
             "</div></body></html>";
