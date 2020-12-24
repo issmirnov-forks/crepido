@@ -147,6 +147,8 @@ app.get("/board*", function (request, response) {
             var picture = "";
             if (rendered[i].head.picture != "none") {
                 picture = '<a href="' + rendered[i].head.picture + '" class="board__picture"><img src="' + rendered[i].head.picture + '"></a>';
+            } else {
+                picture = '<div class="board__picture"></div>';
             }
 
             html +=
