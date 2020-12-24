@@ -6,6 +6,7 @@ var express = require("express");
 var app = express();
 
 var cache = [];
+var serveTypes = [".css", ".js", ".png", ".jpeg", ".jpg"];
 
 // Parse command line arguments
 var args = process.argv.slice(2);
@@ -20,9 +21,9 @@ if (index !== -1) {
     process.exit();
 }
 index = args.indexOf("-p");
-var port = Math.abs(parseInt(args[index + 1])) || 3000;
+var port = Math.abs(parseInt(args[index + 1])) || process.env.PORT || 3000;
 index = args.indexOf("-c");
-var maxTime = Math.abs(parseInt(args[index + 1])) || 10;
+var maxTime = Math.abs(parseInt(args[index + 1])) || process.env.CACHE || 10;
 
 // Checks if path is in cache
 function isCached(path) {
@@ -170,10 +171,14 @@ app.get("/board*", function (request, response) {
 // General GET request
 app.get("/*", function (request, response) {
     gc();
-    if (request.path.indexOf(".css") !== -1 || request.path.indexOf(".js") !== -1) {
-        response.status(200).sendFile(__dirname + request.path);
-        return;
+    for (let i = 0; i < serveTypes.length; i++) {
+        const type = serveTypes[i];
+        if (request.path.indexOf(type) !== -1 || request.path.indexOf(type.toUpperCase()) !== -1) {
+            response.status(200).sendFile(__dirname + request.path);
+            return;
+        }
     }
+
     var cached = isCached(request.path);
     if (cached.response) {
         console.log("get(): serving cached main menu to " + request.ip);
