@@ -494,19 +494,15 @@ footer {
 }
 
 /* Modules */
-.crepido {
-    display: table;
-    padding: 20px;
-    margin: 0 auto;
+.content {
+    text-align: center;
 }
 
 .board {
-    float: left;
+    display: inline-block;
     min-width: 325px;
-}
-
-.board + .board {
-    margin-left: 50px;
+    padding: 25px;
+    vertical-align: top;
 }
 
 .board__header {
@@ -617,3 +613,6 @@ input.done + span {
     background-color: #e74c3c;
 }
 
+@media (prefers-color-scheme: dark) {
+
+}

@@ -133,7 +133,7 @@ app.get("/board*", function (request, response) {
         if (err) {
             console.log("get(): " + request.path + " does not exist (" + request.ip + ")");
             var notfound =
-                '<html><head><title>Crepido</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="/assets/stylesheets/style.css"></head><body><div class="crepido"><div class="board"><div class="board__header"><h1>404</h1><h3 class="board__name">The requested board was not found.</h3></div></div></div></body></html>';
+                '<html><head><title>Kanbana</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="/assets/stylesheets/style.css"></head><body><div class="content"><div class="board"><div class="board__header"><h1>404</h1><h3 class="board__name">The requested board was not found.</h3></div></div></div></body></html>';
             response.type(".html");
             response.status(404).send(notfound);
             return;
@@ -158,7 +158,7 @@ app.get("/board*", function (request, response) {
         html =
             "<html><head><title>" +
             title.join(" | ") +
-            '</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="/assets/stylesheets/style.css"></head><body><div class="crepido">' +
+            '</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="/assets/stylesheets/style.css"></head><body><div class="content">' +
             html +
             "</div></body></html>";
 
@@ -197,7 +197,7 @@ app.get("/*", function (request, response) {
             }
         });
         html =
-            '<html><head><title>Boards</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="/assets/stylesheets/style.css"></head><body><div class="crepido">' +
+            '<html><head><title>Boards</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="/assets/stylesheets/style.css"></head><body><div class="content">' +
             html +
             "</ul></div></div></div></body></html>";
         console.log("get(): serving main menu to " + request.ip);
