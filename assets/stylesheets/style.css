@@ -4,7 +4,7 @@ body {
 }
 
 a {
-    color: #343a40;
+    color: #212529;
 }
 a:hover,
 a:focus {
@@ -180,6 +180,10 @@ input.done + span {
     body {
         background-color: #343a40;
         color: #f1f3f5;
+    }
+
+    a {
+        color: #f8f9fa;
     }
 
     .board__card > ul li {
