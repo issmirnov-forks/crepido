@@ -14,6 +14,8 @@ Based on Crepido by [@issmirnov](https://github.com/issmirnov).
   - [Setup](#setup)
     - [Manual setup](#manual-setup)
     - [Docker setup](#docker-setup)
+      - [`docker run`](#docker-run)
+      - [Docker compose](#docker-compose)
   - [Usage](#usage)
     - [How to create boards](#how-to-create-boards)
     - [Header images](#header-images)
@@ -63,7 +65,36 @@ You can change the port and cache time two ways:
 
 ### Docker setup
 
-_TODO_
+#### `docker run`
+
+```bash
+docker run \
+-p 3000:3000 \
+-v "$PWD/boards:/usr/src/app/boards" \
+-v "$PWD/images:/usr/src/app/images" \
+-v "$PWD/labels.css:/usr/src/app/assets/labels.css" \
+srgmc/kanbana
+```
+
+This command will start the container and mount `$PWD/boards` and `$PWD/images` inside it, so you can add images and boards. If you do not want to customize `labels.css`, remove `-v "$PWD/labels.css:/usr/src/app/assets/labels.css"` from the command.
+
+#### Docker compose
+
+```yaml
+version: "3"
+services:
+    kanbana:
+        environment:
+            PORT: 3000      # Optional
+            CACHE: 10       # Optional, in minutes
+        image: srgmc/kanbana
+        ports:
+            - "3000:3000"   # If PORT is changed, this must be changed too
+        volumes:
+            - "/path/to/boards:/usr/src/app/boards"
+            - "/path/to/images:/usr/src/app/images"
+            - "/path/to/labels.css:/usr/src/app/assets/labels.css" # Optional
+```
 
 ## Usage
 
