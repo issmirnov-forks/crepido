@@ -1,6 +1,6 @@
 {
   "name": "kanbana",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Kanbana allows you to create boards to track users and projects from flat markdown files using Kanban boards.",
   "main": "index.js",
   "private": true,
