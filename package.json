@@ -1,17 +1,17 @@
 {
   "name": "kanbana",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Kanbana allows you to create boards to track users and projects from flat markdown files using Kanban boards.",
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [
     "tracker",
     "tasklist",
-    "projects"
+    "projects",
+    "kanban"
   ],
   "author": "Álvaro Galisteo (http://galisteo.me)",
   "repository": {

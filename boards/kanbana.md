@@ -1,6 +1,6 @@
 ---
 "name": "Kanbana 1",
-"picture": "http://alvaro.ga/images/header.png"
+"picture": "none"
 ---
 
 # Headers
@@ -12,6 +12,16 @@
 * **Bold**
 * *Italic*
 * `code`
+
+## Labels
+- Bug  
+  [bug]
+- Enhancement  
+  [enhancement]
+- Documentation  
+  [documentation]
+- Won't fix  
+  [wontfix]
 
 ---
 "name": "Kanbana 2",
