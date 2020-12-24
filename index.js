@@ -64,7 +64,7 @@ var markedRenderer = new marked.Renderer();
 
 // Heading callback for renderer.
 markedRenderer.heading = function (text, level) {
-    var prefix = "<h" + level + ">";
+    var prefix = "<h2>";
 
     var cssClasses = ["board__card"];
 
@@ -80,7 +80,7 @@ markedRenderer.heading = function (text, level) {
 
     prefix = '<div class="' + cssClasses.join(" ") + '">' + prefix;
 
-    return prefix + text + "</h" + level + ">";
+    return prefix + text + "</h2>";
 };
 
 // List callback for renderer.
@@ -144,14 +144,17 @@ app.get("/board*", function (request, response) {
         var title = [];
         for (var i = 0; i < rendered.length; i++) {
             title.push(rendered[i].head.name);
+            var picture = "";
+            if (rendered[i].head.picture != "none") {
+                picture = '<a href="' + rendered[i].head.picture + '" class="board__picture"><img src="' + rendered[i].head.picture + '"></a>';
+            }
+
             html +=
-                '<div class="board"><div class="board__header"><a href="' +
-                rendered[i].head.picture +
-                '" class="board__picture"><img src="' +
-                rendered[i].head.picture +
-                '"></a><h2 class="board__name">' +
+                '<div class="board"><div class="board__header">' +
+                picture +
+                '<h1 class="board__name">' +
                 rendered[i].head.name +
-                "</h2></div>" +
+                "</h1></div>" +
                 rendered[i].body +
                 "</div>";
         }
