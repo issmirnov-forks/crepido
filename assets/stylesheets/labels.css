@@ -1,0 +1,15 @@
+.label--bug {
+    background-color: #c92a2a;
+}
+
+.label--enhancement {
+    background-color: #1864ab;
+}
+
+.label--documentation {
+    background-color: #20c997;
+}
+
+.label--wontfix {
+    background-color: #212529;
+}

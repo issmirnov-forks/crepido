@@ -537,6 +537,7 @@ footer {
             box-shadow: 0 0 3px rgba(0, 0, 0, .2);
 }
 
+.board__card > h1,
 .board__card > h2 {
     padding: 10px 15px;
     margin: 0;
@@ -583,30 +584,6 @@ input.done + span {
 
 .board__card--pipeline {
     background-color: #3498db;
-}
-
-.label--default {
-    background-color: #2c3e50;
-}
-
-.progress-bar--default {
-    background-color: #2c3e50;
-}
-
-.label--Chrome {
-    background-color: #8e44ad;
-}
-
-.progress-bar--Chrome {
-    background-color: #8e44ad;
-}
-
-.label--CLI {
-    background-color: #e74c3c;
-}
-
-.progress-bar--CLI {
-    background-color: #e74c3c;
 }
 
 @media (prefers-color-scheme: dark) {
