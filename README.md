@@ -210,6 +210,7 @@ and use the label
 The MIT License (MIT)
 
 Copyright (c) 2017 Álvaro Galisteo
+Copyright (c) 2014 Arshad Chummun
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
