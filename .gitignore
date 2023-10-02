@@ -30,3 +30,4 @@ node_modules
 # Custom
 public
 .publish
+.DS_Store
